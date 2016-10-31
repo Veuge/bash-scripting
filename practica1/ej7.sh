@@ -12,6 +12,6 @@ echo CARRIAGE RETURN
 echo -e "In \rfacilisis scelerisqui \rdui vel dignissim."   # carriage return
 echo TAB
 echo -e "In \tfacilisis scelerisqui \tdui vel dignissim."   # tab
-echo -en '\007'
-echo -en "\011"
-echo -en "\012"
+echo -e \007
+echo -e \011
+echo -e \012

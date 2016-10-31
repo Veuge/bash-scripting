@@ -1,8 +1,0 @@
-#!/bin/bash
-# ls -l /root | grep "^[d-]...rwx" | wc -l
-#
-#
-
-DIR=/home/veuge/
-RES_LS=`ls -l $DIR | grep "^[d-]...rwx" | wc -l`
-echo $RES_LS
