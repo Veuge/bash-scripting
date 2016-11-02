@@ -1,22 +1,26 @@
 #!/bin/bash
 #
-echo $0
-echo $1
-echo $2
+# Script que muestra por pantalla sus dos primeros argumentos y el nombre del propio script.
 
-ARGC=$#
-echo Num de argumentos $#
+printf "PRIMERA PARTE\n";
+printf "%-20s %-20s\n" "Nombre del script:" "${0}";
+printf "%-20s %-20s\n" "Argumento 1:" "${1}";
+printf "%-20s %-20s\n" "Argumento 2:" "${2}";
+
+printf "SEGUNDA PARTE\n";
+printf "%-20s %-20s\n" "Numero de argumentos:" "${#}";
 i=0
-while [ $i -le $ARGC ]; do
-    echo "ARGV[$i] = ${!i}"
-    i=$((i+1))
+while [ $i -le $# ]; do
+    printf "ARGV[$i] = ${!i}\n";
+    i=$((i+1));
 done
 
 #con shift
+printf "TERCERA PARTE\n";
 i=0
 while true; do
     if [ $1 ]; then
-        echo "ARGV[$i] = $1"
+        printf "ARGV[$i] = $1\n";
         shift
     else
         break
