@@ -1,28 +1,17 @@
 #!/bin/bash
 #
-echo $0
-echo $1
-echo $2
+# Alerta al usuario si no ha ingresado ningun argumento
 
-ARGC=$#
-echo Num de argumentos $#
-
-if [ $# -ne 2 ]; then
-    echo No suficientes argumentos
-    exit 1
+if [ $# -eq 0 ]; then
+    printf "Por favor intruduzca 1 o mas argumentos...\n";
+    exit 1;
 fi
 
-i=0
-while [ $i -le $ARGC ]; do
-    echo "ARGV[$i] = ${!i}"
-    i=$((i+1))
-done
-
-#con shift
+printf "%-30s %-20s\n" "Numero de argumento ingresados:" "${#}"
 i=0
 while true; do
     if [ $1 ]; then
-        echo "ARGV[$i] = $1"
+        printf "ARGV[$i] = $1\n";
         shift
     else
         break
